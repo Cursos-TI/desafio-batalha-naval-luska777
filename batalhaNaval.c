@@ -1,16 +1,17 @@
 #include <stdio.h>
 
-int main (){
+#define LINHAS 10
+#define COLUNAS 10
 
-    int linhas=11;
-    int colunas=11;
-    int tabuleiro[linhas][colunas];
+int main(){
 
-    for (int i = 1; i < linhas; i++){
-        for (int j = 1; j < colunas; j++){
-            tabuleiro [i][j] = 0;
+    int tabuleiro [LINHAS][COLUNAS];
+
+    for (int i = 0; i < LINHAS; i++){
+        for (int j = 0; j < COLUNAS; j++){
+            tabuleiro[i][j] = 0;
+            }
         }
-    }
 
     tabuleiro [3][3] = 3;
     tabuleiro [3][4] = 3;
@@ -19,15 +20,22 @@ int main (){
     tabuleiro [5][8] = 3;
     tabuleiro [6][8] = 3;
     tabuleiro [7][8] = 3;
-    
-    printf("  A B C D E F G H I J \n");
-    for (int i = 1; i < linhas; i++){
-        printf("%d ", i);
-    for(int j = 1; j < colunas; j++) {
-        printf("%d ", tabuleiro[i][j]);
-        }
-        printf("\n");
-    }
 
-    return 0;
+    tabuleiro [4][2] = 3;
+    tabuleiro [5][3] = 3;
+    tabuleiro [6][4] = 3;
+
+    tabuleiro [5][5] = 3;
+    tabuleiro [4][6] = 3;
+
+    printf("  A B C D E F G H I J \n");
+    for (int i = 0; i < LINHAS; i++){
+        printf("%d ", i);
+         for(int j = 0; j < COLUNAS; j++) {
+             printf("%d ", tabuleiro[i][j]);
+             }
+        printf("\n");
+
+    }   
+    
 }
